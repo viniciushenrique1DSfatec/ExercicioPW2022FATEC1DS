@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3</title>
+</head>
+<body>
+    <h1 id="titulo">Exemplos de DOM</h1>
+    <p id="filho"></p>
+    <p>Sou o 2º parágrafo</p>
+    <p class="p3">Sou o 3º parágrafo</p>
+    <p class="Olá">Boa tarde</p>
+    <p class="Olá">Isso é um exemplo de <b>querySelectorAll</b> bem simples, para entender</p>
+    <p id="demo"></p>
+
+    <ul id="lista">
+        <li class="item">Item 1</li>
+        <li class="item">Item 2</li>
+        <li class="item">Item 3</li>
+    </ul>
+
+
+    <script type="text/javascript">
+        //document.getElementById(); serve para acessar um elemento HTML, com o Id indicado.
+        document.getElementById("filho").innerHTML = "Fui selecionado por ID";
+        //document.getElementsByTagName(); serve para selecionar um elemnto HTML, por tag.
+        var p1 = document.getElementsByTagName("p")[1];
+        p1.style.color = "green";
+        //document.getElementsByClassName();serve para selecionar um elemnto HTML, pelo class.
+        var p3 = window.document.getElementsByClassName("p3")[0]
+        p3.style.background = "#008000";
+        //document.querySelectorAll(); serve para encontrar elementos HTML que corresponde a um seletor CSS, especificado por id, class, etc
+        const x = document.querySelectorAll("p.hello");
+        document.getElementById("demo").innerHTML = 
+        'O primeiro parágrafo (index 0) com class="intro" é: ' + x[0].innerHTML;
+        //document.querySelector(); serve para selecionar um elemnto CSS só (o primeiro)
+        var titulo = document.querySelector("#lista .item");
+        titulo.style.color = "black";
+
+        let classDiv = document.getElementsByClassName("x"); // quando tem o "s" no ELEMENT tem mais de um
+    
+    </script>
+
+</body>
+</html>
